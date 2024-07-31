@@ -1,3 +1,8 @@
+// Universidad del Valle de Guatemala
+// Programación de Plataformas Móviles
+// Sección 40 - 22213 Jorge Chupina
+// Laboratorio #2
+
 class Calculadora {
 }
 

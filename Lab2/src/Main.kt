@@ -4,6 +4,30 @@
 // Laboratorio #2
 
 class Calculadora {
+    private fun simboloOperacion(c: Char): Boolean {
+        return c in "+-*/^"
+    }
+
+    private fun jerarquia(op: Char): Int {
+        return when (op) {
+            '+', '-' -> 1
+            '*', '/' -> 2
+            '^' -> 3
+            else -> -1
+        }
+    }
+
+    private fun utilizarOperador(b: Double, a: Double, op: Char): Double {
+        return when (op) {
+            '+' -> a + b
+            '-' -> a - b
+            '*' -> a * b
+            '/' -> if (b != 0.0) a / b else throw ArithmeticException("División por cero")
+            '^' -> a.pow(b)
+            else -> throw IllegalArgumentException("Operador no válido: $op")
+        }
+    }
+
 }
 
 fun main() {
